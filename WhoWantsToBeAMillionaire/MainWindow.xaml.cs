@@ -23,6 +23,14 @@ namespace WhoWantsToBeAMillionaire
         public MainWindow()
         {
             InitializeComponent();
+
+            asd();
+        }
+
+        private static void asd()
+        {
+            int a = 5;
+            a = a - 2;
         }
     }
 }
