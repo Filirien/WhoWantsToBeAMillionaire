@@ -25,6 +25,19 @@ namespace WhoWantsToBeAMillionaire
             InitializeComponent();
 
             asd();
+
+            if (counterRounds < 5)
+            {
+                Questions.Difficulty.Easy;
+            }
+            else if (counterRounds < 10 && counterRounds >= 5)
+            {
+                Questions.Difficulty.Medium;
+            }
+            else if (counterRounds < 15 && counterRounds >= 10)
+            {
+                Questions.Difficulty.Hard;
+            }
         }
 
         private static void asd()
