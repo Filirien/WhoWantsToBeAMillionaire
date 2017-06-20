@@ -6,12 +6,43 @@
         xmlns:local="clr-namespace:WhoWantsToBeAMillionaire"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
+    <Window.Background>
+        <ImageBrush ImageSource="images/millionaire01.jpg"/>
+    </Window.Background>
     <Grid>
         <TextBlock x:Name="QuestionToAsk"  FontSize="15" TextAlignment="Center" HorizontalAlignment="Left" Height="80" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="497"/>
-        <Button x:Name="AnswerOne" Click="AnswerOne_OnClick" Content="AnswerOne" HorizontalAlignment="Left" Height="66" Margin="10,137,0,0" VerticalAlignment="Top" Width="211"/>
-        <Button x:Name="AnswerTwo" Click="AnswerTwo_OnClick" Content="AnswerTwo" HorizontalAlignment="Left" Height="66" Margin="296,137,0,0" VerticalAlignment="Top" Width="211"/>
-        <Button x:Name="AnswerThree" Click="AnswerThree_OnClick" Content="AnswerThree" HorizontalAlignment="Left" Height="66" Margin="10,229,0,0" VerticalAlignment="Top" Width="211"/>
-        <Button x:Name="AnswerFour" Click="AnswerFour_OnClick" Content="AnswerFour" HorizontalAlignment="Left" Height="66" Margin="296,229,0,0" VerticalAlignment="Top" Width="211"/>
+        <Button x:Name="AnswerOne" Click="AnswerOne_OnClick" Content="AnswerOne" HorizontalAlignment="Left" Height="66" Margin="10,137,0,0" VerticalAlignment="Top" Width="211" FontSize="18">
+            <Button.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF234683" Offset="1"/>
+                    <GradientStop Color="#FF5481CF" Offset="0.405"/>
+                </RadialGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="AnswerTwo" Click="AnswerTwo_OnClick" Content="AnswerTwo" HorizontalAlignment="Left" Height="66" Margin="296,137,0,0" VerticalAlignment="Top" Width="211" FontSize="18" RenderTransformOrigin="1,0">
+            <Button.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF234683" Offset="1"/>
+                    <GradientStop Color="#FF5481CF" Offset="0.405"/>
+                </RadialGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="AnswerThree" Click="AnswerThree_OnClick" Content="AnswerThree" HorizontalAlignment="Left" Height="66" Margin="10,229,0,0" VerticalAlignment="Top" Width="211" FontSize="18">
+            <Button.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF234683" Offset="1"/>
+                    <GradientStop Color="#FF5481CF" Offset="0.432"/>
+                </RadialGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="AnswerFour" Click="AnswerFour_OnClick" Content="AnswerFour" HorizontalAlignment="Left" Height="66" Margin="296,229,0,0" VerticalAlignment="Top" Width="211" FontSize="18">
+            <Button.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF234683" Offset="1"/>
+                    <GradientStop Color="#FF5481CF" Offset="0.405"/>
+                </RadialGradientBrush>
+            </Button.Background>
+        </Button>
         <Button x:Name="JokerOne" Click="JokerOne_OnClick" Content="JokerOne" HorizontalAlignment="Left" Height="20" Margin="10,95,0,0" VerticalAlignment="Top" Width="98"/>
         <Button x:Name="JokerTwo" Click="JokerTwo_OnClick"  Content="JokerTwo" HorizontalAlignment="Left" Height="20" Margin="409,95,0,0" VerticalAlignment="Top" Width="98"/>
         <Button x:Name="JokerThree" Click="JokerThree_OnClick" Content="JokerThree" HorizontalAlignment="Left" Height="20" Margin="211,95,0,0" VerticalAlignment="Top" Width="98"/>
