@@ -55,7 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="JokerFiftyFifty\FiftyFifty.cs" />
     <Compile Include="Questions\Question.cs" />
+    <Compile Include="Questions\GetQuestion.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
