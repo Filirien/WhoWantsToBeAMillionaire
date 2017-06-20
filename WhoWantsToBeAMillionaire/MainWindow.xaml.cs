@@ -23,14 +23,41 @@ namespace WhoWantsToBeAMillionaire
         public MainWindow()
         {
             InitializeComponent();
-
-            asd();
         }
 
-        private static void asd()
+        private void AnswerOne_OnClick(object sender, RoutedEventArgs e)
         {
-            int a = 5;
-            a = a - 2;
+            throw new NotImplementedException();
+        }
+
+        private void AnswerTwo_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void AnswerThree_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void AnswerFour_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void JokerOne_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void JokerTwo_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void JokerThree_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }
