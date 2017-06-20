@@ -61,6 +61,7 @@ namespace WhoWantsToBeAMillionaire
         {
             var Question = GetQuestion.GetEasyQuestion(counterRounds);
             AnswerOne.Content = Question.Answer;
+            QuestionToAsk.Text = Question.QuestionBody;
             var wrongAnswr = Question.WrongAnswers.Take(3);
             AnswerTwo.Content = wrongAnswr.ElementAt(0);
             AnswerThree.Content = wrongAnswr.ElementAt(1);
