@@ -26,7 +26,7 @@ namespace WhoWantsToBeAMillionaire
             InitializeComponent();
         }
 
-<<<<<<< HEAD
+
         private void AnswerOne_OnClick(object sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();
@@ -55,8 +55,8 @@ namespace WhoWantsToBeAMillionaire
         private void JokerTwo_OnClick(object sender, RoutedEventArgs e)
         {
             throw new NotImplementedException();
-=======
-            asd();
+
+          
 
             int counterRounds = 0;
 
@@ -89,7 +89,7 @@ namespace WhoWantsToBeAMillionaire
             }
 
             counterRounds++;
->>>>>>> origin/master
+
         }
 
         private void JokerThree_OnClick(object sender, RoutedEventArgs e)
