@@ -4,7 +4,7 @@ public class Class1
 {
     public Class1()
     {
-        Question.
+       
         switch (Questions.Difficulty)
         {
             case Questions.Difficulty.Easy:

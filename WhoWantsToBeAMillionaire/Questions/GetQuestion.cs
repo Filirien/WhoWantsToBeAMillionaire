@@ -5,7 +5,7 @@ namespace WhoWantsToBeAMillionaire.Questions
 {
     public class GetQuestion
     {
-        public Question GetEasyQuestion(int questionNumber)
+        public static Question GetEasyQuestion(int questionNumber)
         {
             List<Question> questions = new List<Question>();
 
