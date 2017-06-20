@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using WhoWantsToBeAMillionaire.Questions;
 
 namespace WhoWantsToBeAMillionaire.Questions
 {
@@ -48,8 +49,9 @@ namespace WhoWantsToBeAMillionaire.Questions
 
             return questions.ElementAt(questionNumber);
         }
+     
 
-        public Question GetMediumQuestion(int questionNumber)
+        public static Question GetMediumQuestion(int questionNumber)
         {
             List<Question> questions = new List<Question>();
 
@@ -92,7 +94,7 @@ namespace WhoWantsToBeAMillionaire.Questions
             return questions.ElementAt(questionNumber);
         }
 
-        public Question GetHardQuestion(int questionNumber)
+        public static Question GetHardQuestion(int questionNumber)
         {
             List<Question> questions = new List<Question>();
 
