@@ -91,7 +91,7 @@ namespace WhoWantsToBeAMillionaire
                     var currentQuestion = GetQuestion.GetEasyQuestion(counterRounds);
                     MessageBox.Show($"I think the answer is {currentQuestion.Answer}");
                     IsFriendJokerUsed = true;
-                    CallEasyQuestions(currentQuestion);
+                    //CallEasyQuestions(currentQuestion);
                 }
                 else if (counterRounds >= 5 && counterRounds < 10)
                 {
@@ -103,7 +103,7 @@ namespace WhoWantsToBeAMillionaire
                     int index = r.Next(2);
                     MessageBox.Show($"I think the answer is {answers.ElementAt(index)}");
                     IsFriendJokerUsed = true;
-                    CallMediumQuestions(currentQuestion);
+                    //CallMediumQuestions(currentQuestion);
                 }
                 else
                 {
@@ -115,7 +115,7 @@ namespace WhoWantsToBeAMillionaire
                     int index = r.Next(2);
                     MessageBox.Show($"I think the answer is {answers.ElementAt(index)}");
                     IsFriendJokerUsed = true;
-                    CallHardQuestions(currentQuestion);
+                    //CallHardQuestions(currentQuestion);
                 }
             }
             else
@@ -133,7 +133,7 @@ namespace WhoWantsToBeAMillionaire
                     var currentQuestion = GetQuestion.GetEasyQuestion(counterRounds);
                     MessageBox.Show($"The audience think the answer is {currentQuestion.Answer}");
                     IsAudienceJokerUsed = true;
-                    CallEasyQuestions(currentQuestion);
+                    //CallEasyQuestions(currentQuestion);
                 }
                 else if (counterRounds >= 5 && counterRounds < 10)
                 {
@@ -145,7 +145,7 @@ namespace WhoWantsToBeAMillionaire
                     int index = r.Next(2);
                     MessageBox.Show($"The audience think the answer is {answers.ElementAt(index)}");
                     IsAudienceJokerUsed = true;
-                    CallMediumQuestions(currentQuestion);
+                    //CallMediumQuestions(currentQuestion);
                 }
                 else
                 {
@@ -157,7 +157,7 @@ namespace WhoWantsToBeAMillionaire
                     int index = r.Next(2);
                     MessageBox.Show($"The audience think the answer is {answers.ElementAt(index)}");
                     IsAudienceJokerUsed = true;
-                    CallHardQuestions(currentQuestion);
+                    //CallHardQuestions(currentQuestion);
                 }
             }
             else
