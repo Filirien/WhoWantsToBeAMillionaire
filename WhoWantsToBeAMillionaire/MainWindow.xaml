@@ -5,17 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WhoWantsToBeAMillionaire"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525" ResizeMode="NoResize">
     <Window.Background>
         <ImageBrush ImageSource="images/millionaire02.jpg"/>
     </Window.Background>
     <Grid>
-        <TextBlock x:Name="QuestionToAsk"  FontSize="30" TextAlignment="Center" Height="80" Margin="10,10,0,229" TextWrapping="Wrap" Text="TextBlock" Width="497" Foreground="White" TextDecorations="{x:Null}" FontFamily="Segoe UI Semibold" HorizontalAlignment="Left" VerticalAlignment="Center" IsEnabled="False" Padding="0,5,0,0">
+        <TextBlock x:Name="QuestionToAsk"  FontSize="25" TextAlignment="Center" Height="80" Margin="10,0,0,241" TextWrapping="Wrap" Text="TextBlock" Width="497" Foreground="White" TextDecorations="{x:Null}" FontFamily="Segoe UI Semibold" HorizontalAlignment="Left" VerticalAlignment="Center" IsEnabled="False" Padding="0,5,0,0">
             <TextBlock.Background>
                 <RadialGradientBrush>
-                    <GradientStop Color="#FF0838DA" Offset="0.214"/>
-                    <GradientStop Color="#99203F76" Offset="0.646"/>
-                    <GradientStop Color="#4C203476" Offset="0.903"/>
+                    <GradientStop Color="#FF0838DA" Offset="0.34"/>
+                    <GradientStop Color="#99203F76" Offset="0.83"/>
+                    <GradientStop Color="#4C203476" Offset="0.97"/>
                     <GradientStop Color="#0C762020" Offset="1"/>
                 </RadialGradientBrush>
             </TextBlock.Background>
