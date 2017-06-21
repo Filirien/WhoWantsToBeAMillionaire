@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,6 +13,12 @@ namespace WhoWantsToBeAMillionaire
     public partial class MainWindow : Window
     {
         private int counterRounds;
+
+        private bool Is50JokerUsed = false;
+
+        private bool IsFriendJokerUsed = false;
+
+        private bool IsAudienceJokerUsed = false;
 
         public MainWindow()
         {
@@ -42,36 +49,121 @@ namespace WhoWantsToBeAMillionaire
 
         private void JokerOne_OnClick(object sender, RoutedEventArgs e)
         {
-            if (counterRounds < 5)
+            if (Is50JokerUsed == false)
             {
-                var currentQuestion = GetQuestion.GetEasyQuestion(counterRounds);
-                currentQuestion.WrongAnswers[0] = "Wrong";
-                currentQuestion.WrongAnswers[1] = "Wrong";
-                CallEasyQuestions(currentQuestion);
-            }
-            else if (counterRounds >= 5 && counterRounds < 10)
-            {
-                var currentQuestion = GetQuestion.GetMediumQuestion(counterRounds - 5);
-                currentQuestion.WrongAnswers[0] = "Wrong";
-                currentQuestion.WrongAnswers[1] = "Wrong";
-                CallMediumQuestions(currentQuestion);
+                if (counterRounds < 5)
+                {
+                    var currentQuestion = GetQuestion.GetEasyQuestion(counterRounds);
+                    currentQuestion.WrongAnswers[0] = "Wrong";
+                    currentQuestion.WrongAnswers[1] = "Wrong";
+                    Is50JokerUsed = true;
+                    CallEasyQuestions(currentQuestion);
+                }
+                else if (counterRounds >= 5 && counterRounds < 10)
+                {
+                    var currentQuestion = GetQuestion.GetMediumQuestion(counterRounds - 5);
+                    currentQuestion.WrongAnswers[0] = "Wrong";
+                    currentQuestion.WrongAnswers[1] = "Wrong";
+                    Is50JokerUsed = true;
+                    CallMediumQuestions(currentQuestion);
+                }
+                else
+                {
+                    var currentQuestion = GetQuestion.GetHardQuestion(counterRounds - 10);
+                    currentQuestion.WrongAnswers[0] = "Wrong";
+                    currentQuestion.WrongAnswers[1] = "Wrong";
+                    Is50JokerUsed = true;
+                    CallHardQuestions(currentQuestion);
+                }
             }
             else
             {
-                var currentQuestion = GetQuestion.GetHardQuestion(counterRounds - 10);
-                currentQuestion.WrongAnswers[0] = "Wrong";
-                currentQuestion.WrongAnswers[1] = "Wrong";
-                CallHardQuestions(currentQuestion);
+                MessageBox.Show($"This Joker has been already used!");
             }
         }
 
         private void JokerTwo_OnClick(object sender, RoutedEventArgs e)
         {
+            if (IsFriendJokerUsed == false)
+            {
+                if (counterRounds < 5)
+                {
+                    var currentQuestion = GetQuestion.GetEasyQuestion(counterRounds);
+                    MessageBox.Show($"I think the answer is {currentQuestion.Answer}");
+                    IsFriendJokerUsed = true;
+                    CallEasyQuestions(currentQuestion);
+                }
+                else if (counterRounds >= 5 && counterRounds < 10)
+                {
+                    var currentQuestion = GetQuestion.GetMediumQuestion(counterRounds - 5);
+                    List<string> answers = new List<string>();
+                    answers.Add(currentQuestion.Answer);
+                    answers.Add(currentQuestion.WrongAnswers.ElementAt(0));
+                    Random r = new Random();
+                    int index = r.Next(2);
+                    MessageBox.Show($"I think the answer is {answers.ElementAt(index)}");
+                    IsFriendJokerUsed = true;
+                    CallMediumQuestions(currentQuestion);
+                }
+                else
+                {
+                    var currentQuestion = GetQuestion.GetHardQuestion(counterRounds - 10);
+                    List<string> answers = new List<string>();
+                    answers.Add(currentQuestion.Answer);
+                    answers.Add(currentQuestion.WrongAnswers.ElementAt(0));
+                    Random r = new Random();
+                    int index = r.Next(2);
+                    MessageBox.Show($"I think the answer is {answers.ElementAt(index)}");
+                    IsFriendJokerUsed = true;
+                    CallHardQuestions(currentQuestion);
+                }
+            }
+            else
+            {
+                MessageBox.Show($"This Joker has been already used!");
+            }
         }
 
         private void JokerThree_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            if (IsAudienceJokerUsed == false)
+            {
+                if (counterRounds < 5)
+                {
+                    var currentQuestion = GetQuestion.GetEasyQuestion(counterRounds);
+                    MessageBox.Show($"The audience think the answer is {currentQuestion.Answer}");
+                    IsAudienceJokerUsed = true;
+                    CallEasyQuestions(currentQuestion);
+                }
+                else if (counterRounds >= 5 && counterRounds < 10)
+                {
+                    var currentQuestion = GetQuestion.GetMediumQuestion(counterRounds - 5);
+                    List<string> answers = new List<string>();
+                    answers.Add(currentQuestion.Answer);
+                    answers.Add(currentQuestion.WrongAnswers.ElementAt(0));
+                    Random r = new Random();
+                    int index = r.Next(2);
+                    MessageBox.Show($"The audience think the answer is {answers.ElementAt(index)}");
+                    IsAudienceJokerUsed = true;
+                    CallMediumQuestions(currentQuestion);
+                }
+                else
+                {
+                    var currentQuestion = GetQuestion.GetHardQuestion(counterRounds - 10);
+                    List<string> answers = new List<string>();
+                    answers.Add(currentQuestion.Answer);
+                    answers.Add(currentQuestion.WrongAnswers.ElementAt(0));
+                    Random r = new Random();
+                    int index = r.Next(2);
+                    MessageBox.Show($"The audience think the answer is {answers.ElementAt(index)}");
+                    IsAudienceJokerUsed = true;
+                    CallHardQuestions(currentQuestion);
+                }
+            }
+            else
+            {
+                MessageBox.Show($"This Joker has been already used!");
+            }
         }
 
         private void CallEasyQuestions(Question Question)
