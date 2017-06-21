@@ -7,10 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Window.Background>
-        <ImageBrush ImageSource="images/millionaire01.jpg"/>
+        <ImageBrush ImageSource="images/millionaire02.jpg"/>
     </Window.Background>
     <Grid>
-        <TextBlock x:Name="QuestionToAsk"  FontSize="15" TextAlignment="Center" HorizontalAlignment="Left" Height="80" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="497"/>
+        <TextBlock x:Name="QuestionToAsk"  FontSize="30" TextAlignment="Center" Height="80" Margin="10,10,0,229" TextWrapping="Wrap" Text="TextBlock" Width="497" Foreground="White" TextDecorations="{x:Null}" FontFamily="Segoe UI Semibold" HorizontalAlignment="Left" VerticalAlignment="Center" IsEnabled="False" Padding="0,5,0,0">
+            <TextBlock.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF0838DA" Offset="0.214"/>
+                    <GradientStop Color="#99203F76" Offset="0.646"/>
+                    <GradientStop Color="#4C203476" Offset="0.903"/>
+                    <GradientStop Color="#0C762020" Offset="1"/>
+                </RadialGradientBrush>
+            </TextBlock.Background>
+        </TextBlock>
         <Button x:Name="AnswerOne" Click="AnswerOne_OnClick" Content="AnswerOne" HorizontalAlignment="Left" Height="66" Margin="10,137,0,0" VerticalAlignment="Top" Width="211" FontSize="18">
             <Button.Background>
                 <RadialGradientBrush>
