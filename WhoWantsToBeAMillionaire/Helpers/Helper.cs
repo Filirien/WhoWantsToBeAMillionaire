@@ -3,9 +3,10 @@ using WhoWantsToBeAMillionaire.Questions;
 
 namespace WhoWantsToBeAMillionaire.Helpers
 {
+
     class Helper
     {
-        private static Random rand = new Random();
+        public static Random rand = new Random();
         public static void FiftyFifty(Question question)
         {
             var remainQuestionIndex = rand.Next(0, 3);

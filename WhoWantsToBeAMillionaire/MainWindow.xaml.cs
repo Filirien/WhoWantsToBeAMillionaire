@@ -12,14 +12,13 @@ namespace WhoWantsToBeAMillionaire
     /// </summary>
     public partial class MainWindow : Window
     {
-        int counterRounds ;
+        int counterRounds;
 
         public MainWindow()
         {
             InitializeComponent();
             CallEasyQuestions();
         }
-
 
 
         private void AnswerOne_OnClick(object sender, RoutedEventArgs e)
@@ -36,7 +35,6 @@ namespace WhoWantsToBeAMillionaire
         private void AnswerThree_OnClick(object sender, RoutedEventArgs e)
         {
             CheckForAnswer(AnswerThree);
-
         }
 
         private void AnswerFour_OnClick(object sender, RoutedEventArgs e)
@@ -57,16 +55,45 @@ namespace WhoWantsToBeAMillionaire
         {
             throw new NotImplementedException();
         }
+
         private void CallEasyQuestions()
         {
             var Question = GetQuestion.GetEasyQuestion(counterRounds);
-            AnswerOne.Content = Question.Answer;
             QuestionToAsk.Text = Question.QuestionBody;
             var wrongAnswr = Question.WrongAnswers.Take(3);
-            AnswerTwo.Content = wrongAnswr.ElementAt(0);
-            AnswerThree.Content = wrongAnswr.ElementAt(1);
-            AnswerFour.Content = wrongAnswr.ElementAt(2);
+            int random = DateTime.Now.Second;
+            if (random%4==0)
+            {
+                AnswerOne.Content = Question.Answer;
+                AnswerTwo.Content = wrongAnswr.ElementAt(0);
+                AnswerThree.Content = wrongAnswr.ElementAt(1);
+                AnswerFour.Content = wrongAnswr.ElementAt(2);
+            }
+            else if (random % 4 == 1)
+            {
+                AnswerOne.Content = wrongAnswr.ElementAt(0);
+                AnswerTwo.Content =  Question.Answer;
+                AnswerThree.Content = wrongAnswr.ElementAt(1);
+                AnswerFour.Content = wrongAnswr.ElementAt(2);
+
+            }
+            else if (random %4==2)
+            {
+                AnswerOne.Content = wrongAnswr.ElementAt(0);
+                AnswerTwo.Content = wrongAnswr.ElementAt(1);
+                AnswerThree.Content = Question.Answer;
+                AnswerFour.Content = wrongAnswr.ElementAt(2);
+            }
+            else
+            {
+                AnswerOne.Content = wrongAnswr.ElementAt(2);
+                AnswerTwo.Content = wrongAnswr.ElementAt(0);
+                AnswerThree.Content = wrongAnswr.ElementAt(1);
+                AnswerFour.Content =  Question.Answer;
+            }
+         
         }
+
         private void CheckForAnswer(Button Answer)
         {
             if (Answer.Content == GetQuestion.GetEasyQuestion(counterRounds).Answer)
@@ -81,6 +108,5 @@ namespace WhoWantsToBeAMillionaire
                 CallEasyQuestions();
             }
         }
-
     }
 }
