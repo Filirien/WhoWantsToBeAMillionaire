@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Window.Background>
-        <ImageBrush ImageSource="images/millionaire01.jpg"/>
+        <ImageBrush ImageSource="image\millionaire01.jpg"/>
     </Window.Background>
     <Grid>
         <TextBlock x:Name="QuestionToAsk"  FontSize="15" TextAlignment="Center" HorizontalAlignment="Left" Height="80" Margin="10,10,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="497"/>
