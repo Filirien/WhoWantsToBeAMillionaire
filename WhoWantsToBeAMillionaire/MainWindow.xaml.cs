@@ -54,24 +54,24 @@ namespace WhoWantsToBeAMillionaire
                 if (counterRounds < 5)
                 {
                     var currentQuestion = GetQuestion.GetEasyQuestion(counterRounds);
-                    currentQuestion.WrongAnswers[0] = "Wrong";
-                    currentQuestion.WrongAnswers[1] = "Wrong";
+                    currentQuestion.WrongAnswers[0] = "";
+                    currentQuestion.WrongAnswers[1] = "";
                     Is50JokerUsed = true;
                     CallEasyQuestions(currentQuestion);
                 }
                 else if (counterRounds >= 5 && counterRounds < 10)
                 {
                     var currentQuestion = GetQuestion.GetMediumQuestion(counterRounds - 5);
-                    currentQuestion.WrongAnswers[0] = "Wrong";
-                    currentQuestion.WrongAnswers[1] = "Wrong";
+                    currentQuestion.WrongAnswers[0] = "";
+                    currentQuestion.WrongAnswers[1] = "";
                     Is50JokerUsed = true;
                     CallMediumQuestions(currentQuestion);
                 }
                 else
                 {
                     var currentQuestion = GetQuestion.GetHardQuestion(counterRounds - 10);
-                    currentQuestion.WrongAnswers[0] = "Wrong";
-                    currentQuestion.WrongAnswers[1] = "Wrong";
+                    currentQuestion.WrongAnswers[0] = "";
+                    currentQuestion.WrongAnswers[1] = "";
                     Is50JokerUsed = true;
                     CallHardQuestions(currentQuestion);
                 }
@@ -118,6 +118,7 @@ namespace WhoWantsToBeAMillionaire
             else
             {
                 MessageBox.Show($"This Joker has been already used!");
+
             }
         }
 
@@ -318,12 +319,15 @@ namespace WhoWantsToBeAMillionaire
                 }
                 else
                 {
-                    MessageBox.Show("You won all the money there is, please spare us, Master");
+                    MessageBox.Show("You won all the money there is, please spare us, Master!");
                 }
             }
             else
             {
-                MessageBox.Show("WrongAnswer");
+                Is50JokerUsed = false;
+                IsFriendJokerUsed = false;
+                IsAudienceJokerUsed = false;
+                MessageBox.Show("Wrong аnswer!");
                 counterRounds = 0;
                 var currentQuestion = GetQuestion.GetEasyQuestion(counterRounds);
                 CallEasyQuestions(currentQuestion);
